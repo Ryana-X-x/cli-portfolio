@@ -142,7 +142,7 @@ const CLI = () => {
     <div className="cli-container">
       <div className="header">
         <img
-          src={require("../assets/aryan.jpg")}
+          src={require("../assets/aryan1.jpg")}
           alt="Profile"
           className="profile-pic"
         />
