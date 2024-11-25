@@ -19,3 +19,6 @@ services:
 networks:
   app-network:
     driver: bridge  # This creates a bridge network for both containers
+
+environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080

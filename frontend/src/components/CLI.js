@@ -73,7 +73,7 @@ const CLI = () => {
   };
 
   const handleRunCode = () => {
-    fetch("http://localhost:8080/api/run", {
+    fetch("https://cli-resume.onrender.com/api/run", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",

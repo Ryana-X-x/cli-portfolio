@@ -41,4 +41,4 @@ app.get("/", (req, res) => {
   res.send("CLI Portfolio Backend is Running");
 });
 
-app.listen(8080, () => console.log("Backend running on http://backend:8080"));
+// app.listen(8080, () => console.log("Backend running on http://backend:8080"));
