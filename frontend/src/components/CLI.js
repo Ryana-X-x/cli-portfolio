@@ -26,6 +26,18 @@ const CLI = () => {
         ]);
         break;
 
+        case "Help":
+          setOutput([
+            ...output,
+            "- Type 'help' to see this message.",
+            "- Type 'projects' to see the list of projects.",
+            "- Type 'code' to write and run a script.",
+            "- Type 'clear' to clear the terminal.",
+            "- Type 'about' to learn more about me.",
+            "- Type 'contact' to get my contact information.",
+          ]);
+          break;
+
       case "projects":
         setOutput([
           ...output,
@@ -35,7 +47,25 @@ const CLI = () => {
         ]);
         break;
 
+        case "Projects":
+          setOutput([
+            ...output,
+            "Here are some of my projects:",
+            "1. Project A - https://github.com/username/project-a",
+            "2. Project B - https://github.com/username/project-b",
+          ]);
+          break;
+
       case "code":
+        setOutput([
+          ...output,
+          "Opening the code editor...",
+          "Type your Bash script below and click 'Run' to see the output.",
+        ]);
+        setIsCodeEditorVisible(true);
+        break;
+
+      case "Code":
         setOutput([
           ...output,
           "Opening the code editor...",
@@ -50,7 +80,22 @@ const CLI = () => {
         setCodeOutput("");
         break;
 
+      case "Clear":
+        setOutput([]);
+        setIsCodeEditorVisible(false);
+        setCodeOutput("");
+        break;
+
       case "about":
+        setOutput([
+          ...output,
+          "I am a passionate developer with experience in React, Node.js, and various web technologies.",
+          "I enjoy building projects that solve real-world problems and showcase my skills.",
+          "You can check out my portfolio and projects here.",
+        ]);
+        break;
+
+      case "About":
         setOutput([
           ...output,
           "I am a passionate developer with experience in React, Node.js, and various web technologies.",
@@ -66,6 +111,14 @@ const CLI = () => {
           "Or check my linktr.ee: https://linktr.ee/Aryan.x_x",
         ]);
         break;
+
+      case "Contact":
+        setOutput([
+          ...output,
+          "You can contact me via email: aryansehgal3212@gmail.com",
+          "Or check my linktr.ee: https://linktr.ee/Aryan.x_x",
+        ]);
+        break;  
 
       default:
         setOutput([...output, `Command not recognized: ${cmd}`]);
