@@ -1,0 +1,150 @@
+/* General styling for the CLI container */
+.cli-container {
+    font-family: 'Courier New', monospace;
+    color: #dcdcdc;
+    background-color: #121212;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Header section with profile picture and hire button */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .hire-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .hire-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the CLI terminal output with green border around it */
+  .cli {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    border: 3px solid #4caf50; /* Green border for the CLI */
+    overflow-y: auto;
+    max-height: 60vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Input area styling */
+  .cli input {
+    background: transparent;
+    color: #dcdcdc;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  /* Green color for the command line text */
+  .cmd-input {
+    color: #4caf50;
+  }
+  
+  /* Input focus style */
+  .cli input:focus {
+    border-bottom: 1px solid #4caf50;
+  }
+  
+  /* Style for the code editor container */
+  .code-editor {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling the textarea (code input area) */
+  .code-editor textarea {
+    width: 100%;
+    min-height: 200px;
+    background-color: #121212;
+    color: #dcdcdc;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* Button to run code */
+  .code-editor button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .code-editor button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Preformatted text area for code output */
+  .code-editor pre {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    color: #dcdcdc;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* Styling for each output line */
+  .cli div {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Add some responsiveness */
+  @media (max-width: 768px) {
+    .cli {
+      max-width: 100%;
+    }
+    .code-editor {
+      max-width: 100%;
+    }
+    .code-editor textarea {
+      font-size: 14px;
+    }
+  }
+  
